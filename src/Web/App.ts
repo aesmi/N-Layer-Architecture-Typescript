@@ -5,7 +5,7 @@ import { UserController } from './User.controller'
 
 class App {
   static PORT = 5000
-  private server: express.Application = express()
+  public server: express.Application = express()
 
   constructor() {
     this.run()
@@ -16,9 +16,11 @@ class App {
       Types.UserHttpController
     )
 
-    this.server.get('/', userController.store)
+    this.server.post('/', userController.store)
 
-    this.server.listen(App.PORT, this.onSuccessListen)
+    if (process.env.NODE_ENV !== 'test') {
+      this.server.listen(App.PORT, this.onSuccessListen)
+    }
   }
 
   private onSuccessListen() {

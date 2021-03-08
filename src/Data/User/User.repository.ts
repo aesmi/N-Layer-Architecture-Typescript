@@ -14,7 +14,11 @@ export class UserRepository implements IUserRepository {
     const createdUser = this.database.create<UserDAL>(payload)
 
     // Use a mapper to make sure that the DALEntity equals the Core entity
-    return createdUser
+    return {
+      id: createdUser.id,
+      name: createdUser.name,
+      createdAt: createdUser.createdAt,
+    } as User
   }
 }
 
