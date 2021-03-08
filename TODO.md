@@ -1,13 +1,16 @@
 - [x] Turn User into a module for both Core and Data
-- [ ] AutoMapper
-- [ ] Is IService really a port?
-- [ ] Shared folders with helpers
+- [x] Add Mapper
 - [ ] Create Adapter for persistence add mocked database
+- [ ] Replace mocked database with a real one
+- [ ] DI in Data layer (repository)
 - [x] Do we need an IOC Container?
 - [x] Build a basic express server
 - [x] Add tests
-- [ ] Replace mocked database with a real one
+- [ ] Is IService really a port?
+- [ ] Shared folders with helpers/lib
 - [ ] Create an aggregated root for User Posts.
 - [ ] Implement a create and get posts
 - [ ] Clean up all imports with Absolute Pathing
+- [ ] Do all comment todos
+- [ ] Brainstorm: Side Effects, catching events. ~~dont implement~~
 - [ ] Create README.md with rules

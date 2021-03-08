@@ -3,4 +3,5 @@ export const Types = {
   UserRepository: Symbol('UserRepository'),
   UserHttpController: Symbol('UserHttpController'),
   UserMapper: Symbol('UserMapper'),
+  Database: Symbol('Database'),
 }
