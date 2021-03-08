@@ -1,10 +1,9 @@
 - [x] Turn User into a module for both Core and Data
-- [ ] Export UserService with all its dependencies from Core
 - [ ] AutoMapper
 - [ ] Is IService really a port?
 - [ ] Shared folders with helpers
 - [ ] Create Adapter for persistence add mocked database
-- [ ] Do we need an IOC Container?
+- [x] Do we need an IOC Container?
 - [ ] Build a basic express server
 - [ ] Add tests
 - [ ] Replace mocked database with a real one

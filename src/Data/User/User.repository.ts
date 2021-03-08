@@ -1,11 +1,14 @@
 import { IUserRepository } from '../../Core/User/Ports/IUserRepository.port'
 import { User } from '../../Core/User/User.entity'
 import { User as UserDAL } from './User.entity'
-import { database, Database } from '../Database'
+import { Database, database } from '../Database'
+import { injectable } from 'inversify'
 
+@injectable()
 export class UserRepository implements IUserRepository {
+  private readonly database: Database = database
   // TODO: Implements IDatabase
-  constructor(private readonly database: Database) {}
+  // constructor(private readonly database: Database) {}
 
   save(payload: User): User {
     const createdUser = this.database.create<UserDAL>(payload)
@@ -15,4 +18,4 @@ export class UserRepository implements IUserRepository {
   }
 }
 
-export const userRepository = new UserRepository(database)
+export const userRepository = new UserRepository()
