@@ -1,8 +1,8 @@
 - [x] Turn User into a module for both Core and Data
 - [x] Add Mapper
-- [ ] Create Adapter for persistence add mocked database
+- [x] Put database in its own Module
+- [x] DI in Data layer (repository)
 - [ ] Replace mocked database with a real one
-- [ ] DI in Data layer (repository)
 - [x] Do we need an IOC Container?
 - [x] Build a basic express server
 - [x] Add tests
