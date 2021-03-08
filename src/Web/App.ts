@@ -1,6 +1,7 @@
 import express from 'express'
 import { container } from '../Config/DI/Container'
 import { Types } from '../Config/DI/Types'
+import { connectToMongo } from '../Data/Drivers/Mongoose/Connection'
 import { UserController } from './User/User.controller'
 import { UserValidator } from './User/User.validator'
 
@@ -16,6 +17,10 @@ class App {
     const userController = container.get<UserController>(
       Types.UserHttpController
     )
+
+    if (process.env.NODE_ENV !== 'test') {
+      connectToMongo()
+    }
 
     this.server.use(express.json())
     this.server.post('/', UserValidator.CreateUserRequest, userController.store)
