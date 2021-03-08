@@ -16,6 +16,7 @@ class App {
       Types.UserHttpController
     )
 
+    this.server.use(express.json())
     this.server.post('/', userController.store)
 
     if (process.env.NODE_ENV !== 'test') {

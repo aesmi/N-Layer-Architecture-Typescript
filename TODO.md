@@ -9,4 +9,5 @@
 - [ ] Replace mocked database with a real one
 - [ ] Create an aggregated root for User Posts.
 - [ ] Implement a create and get posts
+- [ ] Clean up all imports with Absolute Pathing
 - [ ] Create README.md with rules

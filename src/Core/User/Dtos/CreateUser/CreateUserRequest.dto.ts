@@ -1,5 +1,5 @@
 export class CreateUserRequestDto {
-  name: string
+  public name: string
 
   constructor(payload: CreateUserRequestDto) {
     this.name = payload.name
