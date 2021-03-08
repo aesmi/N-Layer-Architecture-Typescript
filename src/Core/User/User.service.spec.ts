@@ -1,12 +1,13 @@
 import 'reflect-metadata'
 
 import { Container, injectable } from 'inversify'
+
+import { CoreValidationException } from 'Core/Lib/Exceptions/CoreValidation.exception'
 import { UserModule } from 'Config/DI/Modules/User.module'
+import { IUserRepository } from 'Core/User/Ports/IUserRepository.port'
+import { IUserService } from 'Core/User/Ports/IUserService.port'
+import { IUserEntity } from 'Core/User/IUserEntity'
 import { Types } from 'Config/DI/Types'
-import { IUserRepository } from './Ports/IUserRepository.port'
-import { IUserService } from './Ports/IUserService.port'
-import { IUserEntity } from './IUserEntity'
-import { CoreValidationException } from '../Lib/Exceptions/CoreValidation.exception'
 
 @injectable()
 class RepoMock implements IUserRepository {

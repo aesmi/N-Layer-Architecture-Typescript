@@ -1,6 +1,6 @@
-import { CoreValidationException } from '../Lib/Exceptions/CoreValidation.exception'
-import { generateUUID } from '../Lib/GenerateUUID'
-import { IUserEntity } from './IUserEntity'
+import { CoreValidationException } from 'Core/Lib/Exceptions/CoreValidation.exception'
+import { generateUUID } from 'Core/Lib/GenerateUUID'
+import { IUserEntity } from 'Core/User/IUserEntity'
 
 export class User implements IUserEntity {
   public id: string

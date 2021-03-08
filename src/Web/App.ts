@@ -1,9 +1,9 @@
 import express from 'express'
-import { container } from '../Config/DI/Container'
-import { Types } from '../Config/DI/Types'
-import { connectToMongo } from '../Data/Drivers/Mongoose/Connection'
-import { UserController } from './User/User.controller'
-import { UserValidator } from './User/User.validator'
+import { container } from 'Config/DI/Container'
+import { Types } from 'Config/DI/Types'
+import { connectToMongo } from 'Data/Drivers/Mongoose/Connection'
+import { UserController } from 'Web/User/User.controller'
+import { UserValidator } from 'Web/User/User.validator'
 
 class App {
   static PORT = 5000

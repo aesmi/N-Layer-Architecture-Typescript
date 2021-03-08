@@ -1,7 +1,7 @@
 import { injectable } from 'inversify'
 import { IUserEntity } from 'Core/User/IUserEntity'
 import { IUserModel } from 'Data/Drivers/Mongoose/User/User.model'
-import { IUserMapper } from './IUserMapper'
+import { IUserMapper } from 'Config/Mappers/User/IUserMapper'
 
 @injectable()
 export class UserMapper implements IUserMapper {
