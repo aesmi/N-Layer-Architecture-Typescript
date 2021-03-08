@@ -2,14 +2,13 @@
 - [x] Add Mapper
 - [x] Put database in its own Module
 - [x] DI in Data layer (repository)
-- [ ] Replace mocked database with a real one
+- [x] Replace mocked database with a real one
 - [x] Do we need an IOC Container?
 - [x] Build a basic express server
 - [x] Add tests
 - [x] Add interfaces for Core entity
-- [ ] Is IService really a port?
-- [ ] Shared folders with helpers/lib
-- [ ] Make sure there are no naming conflicts. e.g "User"
+- [x] Is IService really a port?
+- [x] Make sure there are no naming conflicts. e.g "User"
 - [ ] Create an aggregated root for User Posts.
 - [ ] Implement a create and get posts
 - [ ] Clean up all imports with Absolute Pathing
