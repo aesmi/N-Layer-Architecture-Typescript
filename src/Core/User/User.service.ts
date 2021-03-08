@@ -1,10 +1,10 @@
 import { inject, injectable } from 'inversify'
-import { Types } from '../../Config/DI/Types'
-import { CreateUserRequestDto, CreateUserResponseDto } from './Dtos'
+import { Types } from 'Config/DI/Types'
+import { CreateUserRequestDto } from './Dtos'
 import { IUserRepository } from './Ports/IUserRepository.port'
 import { IUserService } from './Ports/IUserService.port'
 import { User } from './User.entity'
-import { IUserMapper } from '../../Config/Mappers/User/IUserMapper'
+import { IUserMapper } from 'Config/Mappers/User/IUserMapper'
 
 @injectable()
 export class UserService implements IUserService {

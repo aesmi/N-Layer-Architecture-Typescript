@@ -1,6 +1,6 @@
 import { injectable } from 'inversify'
-import { IUserEntity } from '../../../Core/User/IUserEntity'
-import { IUserModel } from '../../../Data/Drivers/Mongoose/User/User.model'
+import { IUserEntity } from 'Core/User/IUserEntity'
+import { IUserModel } from 'Data/Drivers/Mongoose/User/User.model'
 import { IUserMapper } from './IUserMapper'
 
 @injectable()

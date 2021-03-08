@@ -1,6 +1,6 @@
 import { NextFunction, Request } from 'express'
-import { CreateUserRequestDto } from '../../Core/User/Dtos'
-import { HttpException } from '../Lib/Http.exception'
+import { CreateUserRequestDto } from 'Core/User/Dtos'
+import { HttpException } from 'Web/Lib/Http.exception'
 
 export class UserValidator {
   static CreateUserRequest(

@@ -1,4 +1,4 @@
-import { IUserEntity } from '../../../../Core/User/IUserEntity'
+import { IUserEntity } from 'Core/User/IUserEntity'
 
 export class UserDAL implements IUserEntity {
   public id: string

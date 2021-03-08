@@ -11,7 +11,7 @@
 - [x] Make sure there are no naming conflicts. e.g "User"
 - [ ] Create an aggregated root for User Posts.
 - [ ] Implement a create and get posts
-- [ ] Clean up all imports with Absolute Pathing
+- [x] Clean up all imports with Absolute Pathing
 - [ ] Do all comment todos
 - [ ] Brainstorm: Side Effects, catching events. ~~dont implement~~
 - [ ] Create README.md with rules

@@ -1,9 +1,9 @@
 import 'dotenv/config'
 
 import Request from 'supertest'
-import { connectToMongo } from '../../Data/Drivers/Mongoose/Connection'
-import UserModel from '../../Data/Drivers/Mongoose/User/User.model'
-import { app } from '../App'
+import { connectToMongo } from 'Data/Drivers/Mongoose/Connection'
+import UserModel from 'Data/Drivers/Mongoose/User/User.model'
+import { app } from 'Web/App'
 
 const request = Request(app.server)
 

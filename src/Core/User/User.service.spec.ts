@@ -1,8 +1,8 @@
 import 'reflect-metadata'
 
 import { Container, injectable } from 'inversify'
-import { UserModule } from '../../Config/DI/Modules/User.module'
-import { Types } from '../../Config/DI/Types'
+import { UserModule } from 'Config/DI/Modules/User.module'
+import { Types } from 'Config/DI/Types'
 import { IUserRepository } from './Ports/IUserRepository.port'
 import { IUserService } from './Ports/IUserService.port'
 import { IUserEntity } from './IUserEntity'
