@@ -22,8 +22,7 @@ It all belongs in here. You should be very aware that the **Data** depends on **
 ### Core
 
 The Core Layer is where all the business related things happen. It's also responsible for creating ports(interfaces),
-a port to me means that another lay has to go thru this in order to communicate. In other words the **Core** layer gives the **Data** layer
-a key to get access to our implementations. Do note, the **Core** layer does not know about implementations of other layers.
+a port to me means that another layer has to go through this in order to communicate. a key to get access to our implementations. Do note, the **Core** layer does not know about implementations of other layers.
 
 ### Web
 
