@@ -1,4 +1,4 @@
-- [ ] Turn User into a module for both Core and Data
+- [x] Turn User into a module for both Core and Data
 - [ ] Export UserService with all its dependencies from Core
 - [ ] AutoMapper
 - [ ] Is IService really a port?

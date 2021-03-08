@@ -1,7 +1,7 @@
-import { IUserRepository } from '../Core/Ports/IUserRepository.port'
-import { User } from '../Core/User.entity'
-import { User as UserDAL } from './Entities/User.entity'
-import { database, Database } from './Database'
+import { IUserRepository } from '../../Core/User/Ports/IUserRepository.port'
+import { User } from '../../Core/User/User.entity'
+import { User as UserDAL } from './User.entity'
+import { database, Database } from '../Database'
 
 export class UserRepository implements IUserRepository {
   // TODO: Implements IDatabase

@@ -1,4 +1,4 @@
-import { userService } from './Core'
+import { userService } from './Core/User'
 import { UserController } from './Web/App'
 
 const userController = new UserController(userService)
