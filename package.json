@@ -1,0 +1,13 @@
+{
+  "name": "ts-template",
+  "version": "1.0.0",
+  "main": "Bootstrap.ts",
+  "scripts": {
+    "run:dev": "ts-node-dev --respawn --transpile-only ./src/Bootstrap.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.2"
+  }
+}
