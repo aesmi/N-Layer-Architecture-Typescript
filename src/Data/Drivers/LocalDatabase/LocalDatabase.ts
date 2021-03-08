@@ -1,8 +1,11 @@
-import { injectable } from 'inversify'
-
-@injectable()
 export class LocalDatabase {
-  create<T>(payload: T) {
-    return payload as T
+  private state: Record<string, any> = {
+    users: [],
+  }
+
+  create<T>(entity: 'users', payload: T) {
+    this.state[entity] = payload
+
+    return this.state[entity]
   }
 }

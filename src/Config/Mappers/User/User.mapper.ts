@@ -1,36 +1,33 @@
 import { injectable } from 'inversify'
-import { User } from '../../../Core/User/User.entity'
-import { User as DALUser } from '../../../Data/User/User.entity'
+import { IUserEntity } from '../../../Core/User/IUserEntity'
+import { IUserModel } from '../../../Data/Drivers/Mongoose/User/User.model'
 import { IUserMapper } from './IUserMapper'
 
 @injectable()
 export class UserMapper implements IUserMapper {
-  public toDomain(payload: DALUser): User {
+  public toDomain(payload: IUserModel): IUserEntity {
     return {
-      id: payload.id,
+      id: payload._id,
       name: payload.name,
       createdAt: payload.createdAt,
     }
   }
 
-  // TODO: What if this is a mongoose instance
-  // TODO: What if we have different drivers
-  public toPersistence(payload: DALUser): DALUser {
+  public toPersistence(payload: IUserEntity): IUserModel {
     return {
-      id: payload.id,
+      _id: payload.id,
       name: payload.name,
       createdAt: payload.createdAt,
     }
   }
 
-  // TODO: Should we abstract this?
-  public toCreateUserRequestDto(payload: User['name']) {
+  public toCreateUserRequestDto(payload: IUserEntity['name']) {
     return {
       name: payload,
     }
   }
 
-  public toCreateUserResponseDto(payload: User) {
+  public toCreateUserResponseDto(payload: IUserEntity) {
     return {
       id: payload.id,
       name: payload.name,

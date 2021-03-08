@@ -2,15 +2,16 @@ import { ContainerModule } from 'inversify'
 import { IUserRepository } from '../../../Core/User/Ports/IUserRepository.port'
 import { IUserService } from '../../../Core/User/Ports/IUserService.port'
 import { UserService } from '../../../Core/User/User.service'
-import { UserRepository } from '../../../Data/User/User.repository'
+import { UserRepository as LocalUserRepository } from '../../../Data/Drivers/LocalDatabase/User/User.repository'
+import { UserRepository as MongoUserRepository } from '../../../Data/Drivers/Mongoose/User/User.repository'
 import { UserController } from '../../../Web/User/User.controller'
 import { IUserMapper } from '../../Mappers/User/IUserMapper'
 import { UserMapper } from '../../Mappers/User/User.mapper'
 import { Types } from '../Types'
 
-export const User = new ContainerModule((bind) => {
+export const UserModule = new ContainerModule((bind) => {
   bind<IUserRepository>(Types.UserRepository)
-    .to(UserRepository)
+    .to(MongoUserRepository)
     .inSingletonScope()
   bind<IUserService>(Types.UserService).to(UserService).inSingletonScope()
   // TODO: Bind toself?

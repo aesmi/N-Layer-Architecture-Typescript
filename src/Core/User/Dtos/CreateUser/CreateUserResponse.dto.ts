@@ -1,8 +1,6 @@
 export class CreateUserResponseDto {
   id: string
-
   name: string
-
   createdAt: Date
 
   constructor(payload: CreateUserResponseDto) {

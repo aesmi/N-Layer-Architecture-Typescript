@@ -16,11 +16,11 @@ export class UserController {
     this.store = this.store.bind(this)
   }
 
-  store(req: Request, res: Response) {
+  async store(req: Request, res: Response) {
     // TODO: move this to a middleware which validates the presence
     // And returns us the mapped request dto!
     const payload = this.userMapper.toCreateUserRequestDto(req.body.name)
-    const createdUser = this.userService.createUser(payload)
+    const createdUser = await this.userService.createUser(payload)
 
     res.json(createdUser)
   }

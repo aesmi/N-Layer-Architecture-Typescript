@@ -2,11 +2,10 @@ import 'reflect-metadata'
 
 import { Container } from 'inversify'
 
-import { User } from './Modules/User.module'
-import { Data } from './Modules/Data.module'
+import { UserModule } from './Modules/User.module'
 
 const container = new Container()
 
-container.load(Data, User)
+container.load(UserModule)
 
 export { container }

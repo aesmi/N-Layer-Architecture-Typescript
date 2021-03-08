@@ -13,9 +13,9 @@ export class UserService implements IUserService {
     @inject(Types.UserMapper) private readonly userMapper: IUserMapper
   ) {}
 
-  createUser(payload: CreateUserRequestDto): CreateUserResponseDto {
+  async createUser(payload: CreateUserRequestDto) {
     const userEntity = new User(payload)
-    const createdUser = this.userRepo.save(userEntity)
+    const createdUser = await this.userRepo.save(userEntity)
 
     return this.userMapper.toCreateUserResponseDto(createdUser)
   }

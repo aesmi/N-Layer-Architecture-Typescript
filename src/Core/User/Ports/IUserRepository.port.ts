@@ -1,5 +1,5 @@
-import { User } from '../User.entity'
+import { IUserEntity } from '../IUserEntity'
 
 export interface IUserRepository {
-  save(payload: User): User
+  save(payload: IUserEntity): IUserEntity
 }
