@@ -2,7 +2,6 @@ import { Request, Response } from 'express'
 import { inject, injectable } from 'inversify'
 import { Types } from '../../Config/DI/Types'
 import { IUserMapper } from '../../Config/Mappers/User/IUserMapper'
-import { UserMapper } from '../../Config/Mappers/User/User.mapper'
 import { IUserService } from '../../Core/User/Ports/IUserService.port'
 
 @injectable()
@@ -17,8 +16,6 @@ export class UserController {
   }
 
   async store(req: Request, res: Response) {
-    // TODO: move this to a middleware which validates the presence
-    // And returns us the mapped request dto!
     const payload = this.userMapper.toCreateUserRequestDto(req.body.name)
     const createdUser = await this.userService.createUser(payload)
 

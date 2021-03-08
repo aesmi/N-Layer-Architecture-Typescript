@@ -1,4 +1,4 @@
-import { CoreValidationException } from '../Exceptions/CoreValidation.exception'
+import { CoreValidationException } from '../Lib/Exceptions/CoreValidation.exception'
 import { generateUUID } from '../Lib/GenerateUUID'
 import { IUserEntity } from './IUserEntity'
 
@@ -19,7 +19,7 @@ export class User implements IUserEntity {
   }
 
   private validate({ name }: Partial<User>) {
-    if (name && name.length <= 4) {
+    if (name && name.length < 4) {
       throw new CoreValidationException(
         'Username must have atleast 4 characters'
       )

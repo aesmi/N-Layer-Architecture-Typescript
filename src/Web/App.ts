@@ -2,6 +2,7 @@ import express from 'express'
 import { container } from '../Config/DI/Container'
 import { Types } from '../Config/DI/Types'
 import { UserController } from './User/User.controller'
+import { UserValidator } from './User/User.validator'
 
 class App {
   static PORT = 5000
@@ -17,7 +18,7 @@ class App {
     )
 
     this.server.use(express.json())
-    this.server.post('/', userController.store)
+    this.server.post('/', UserValidator.CreateUserRequest, userController.store)
 
     if (process.env.NODE_ENV !== 'test') {
       this.server.listen(App.PORT, this.onSuccessListen)
