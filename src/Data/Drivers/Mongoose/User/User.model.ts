@@ -1,5 +1,4 @@
 import mongoose, { Schema, Document } from 'mongoose'
-import { IUserEntity } from '../../../../Core/User/IUserEntity'
 
 export interface IUserModel {
   _id: string

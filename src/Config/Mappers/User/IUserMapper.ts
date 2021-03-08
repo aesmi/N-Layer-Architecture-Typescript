@@ -1,6 +1,3 @@
-import { User } from '../../../Core/User/User.entity'
-import { UserDAL } from '../../../Data/Drivers/LocalDatabase/User/User.entity'
-
 import {
   CreateUserRequestDto,
   CreateUserResponseDto,
