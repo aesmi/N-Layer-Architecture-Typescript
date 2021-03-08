@@ -5,7 +5,7 @@
 - [ ] Create Adapter for persistence add mocked database
 - [x] Do we need an IOC Container?
 - [x] Build a basic express server
-- [ ] Add tests
+- [x] Add tests
 - [ ] Replace mocked database with a real one
 - [ ] Create an aggregated root for User Posts.
 - [ ] Implement a create and get posts

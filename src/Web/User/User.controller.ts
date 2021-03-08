@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { inject, injectable } from 'inversify'
-import { Types } from '../Config/DI/Types'
-import { IUserService } from '../Core/User/Ports/IUserService.port'
+import { Types } from '../../Config/DI/Types'
+import { IUserService } from '../../Core/User/Ports/IUserService.port'
 
 @injectable()
 export class UserController {

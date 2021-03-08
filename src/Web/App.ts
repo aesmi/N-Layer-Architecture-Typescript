@@ -1,7 +1,7 @@
 import express from 'express'
 import { container } from '../Config/DI/Container'
 import { Types } from '../Config/DI/Types'
-import { UserController } from './User.controller'
+import { UserController } from './User/User.controller'
 
 class App {
   static PORT = 5000
