@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import 'dotenv/config'
 
 import Request from 'supertest'
@@ -5,7 +6,7 @@ import { connectToMongo } from 'Data/Drivers/Mongoose/Connection'
 import UserModel from 'Data/Drivers/Mongoose/User/User.model'
 import { app } from 'Web/App'
 
-const request = Request(app.server)
+const request = Request(app.app)
 
 describe('UserController', () => {
   beforeAll(async (done) => {
@@ -19,7 +20,7 @@ describe('UserController', () => {
   })
 
   it('Should get an OK response', async (done) => {
-    const res = await request.post('/').send({ name: 'Donny' })
+    const res = await request.post('/users').send({ name: 'Donny' })
     expect(res.status).toEqual(200)
     done()
   })

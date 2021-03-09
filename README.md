@@ -51,7 +51,8 @@ I'm not sure whether I should really define this as a Layer, but it's responsibi
 - [x] Implement absolute paths
 - [x] Create a post with user
 - [x] Get user posts by user
-- [ ] Refactor API Server with inversify express utils & add final tests
+- [x] Refactor API Server with inversify express utils
+- [ ] Add final tests
 
 ## Next
 
