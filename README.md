@@ -44,13 +44,11 @@ I'm not sure whether I should really define this as a Layer, but it's responsibi
 - [x] Put database in its own Module
 - [x] DI in Data layer (repository)
 - [x] Replace mocked database with a real one
-- [x] Do we need an IOC Container?
+- [x] Setup IOC Container
 - [x] Build a basic express server
 - [x] Add tests
 - [x] Add interfaces for Core entity
-- [x] Is IService really a port?
-- [x] Make sure there are no naming conflicts. e.g "User"
-- [x] Clean up all imports with Absolute Pathing
+- [x] Implement absolute paths
 - [x] Create a post with user
 - [x] Get user posts by user
 - [ ] Refactor API Server with inversify express utils & add final tests
