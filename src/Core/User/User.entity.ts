@@ -1,24 +1,19 @@
 import { CoreValidationException } from 'Core/Lib/Exceptions/CoreValidation.exception'
-import { generateUUID } from 'Core/Lib/GenerateUUID'
 import { IUserEntity } from 'Core/User/IUserEntity'
+import { Entity } from 'Core/Lib/Entity'
 
-export class User implements IUserEntity {
+export class User extends Entity<IUserEntity> implements IUserEntity {
   public id: string
   public name: string
   public createdAt: Date
 
-  constructor(props: Partial<User>) {
-    this.validate(props)
-    this.initialize(props)
-  }
-
-  private initialize({ id, name, createdAt }: Partial<User>) {
-    this.id = id != null ? id : generateUUID()
+  protected initialize({ id, name, createdAt }: IUserEntity) {
+    this.id = id != null ? id : this.genUUID()
     this.name = name!
-    this.createdAt = createdAt != null ? createdAt : new Date()
+    this.createdAt = this.initOrDefaultTime(createdAt)
   }
 
-  private validate({ name }: Partial<User>) {
+  protected validate({ name }: IUserEntity) {
     if (name && name.length < 4) {
       throw new CoreValidationException(
         'Username must have atleast 4 characters'
