@@ -51,9 +51,6 @@ I'm not sure whether I should really define this as a Layer, but it's responsibi
 - [x] Add interfaces for Core entity
 - [x] Is IService really a port?
 - [x] Make sure there are no naming conflicts. e.g "User"
-- [ ] Create an aggregated root for User Posts.
-- [ ] Implement a create and get posts
 - [x] Clean up all imports with Absolute Pathing
-- [ ] Do all comment todos
-- [ ] Brainstorm: Side Effects, catching events. ~~dont implement~~
-- [ ] Create README.md with rules
+- [ ] Create an aggregated root for User Posts.
+- [ ] Create a post, get posts by user

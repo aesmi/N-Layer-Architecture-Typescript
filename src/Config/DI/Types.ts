@@ -3,5 +3,8 @@ export const Types = {
   UserRepository: Symbol('UserRepository'),
   UserHttpController: Symbol('UserHttpController'),
   UserMapper: Symbol('UserMapper'),
-  Database: Symbol('Database'),
+  PostService: Symbol('PostService'),
+  PostRepository: Symbol('PostRepository'),
+  PostHttpController: Symbol('PostHttpController'),
+  PostMapper: Symbol('PostMapper'),
 }
