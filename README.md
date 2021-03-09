@@ -1,8 +1,7 @@
 # N-Layer Architecture in Node with Typescript
 
-This repository is a building block for me and anyone else who's interested in writing a more 'advanced'
-application without going all bonkers. It priortizes on making sure every layer is decoupled from each other. This allows us
-to 'easily' switch between technologies, test with ease and to add features with no sweat!
+This repository is a building block for me. It priortizes on making sure every layer is decoupled from each other.
+This allows us to 'easily' switch between technologies, test with ease and to add features with no sweat!
 
 Do note this is my take on writing a **N-Layer Architecture** and I'm in the very beginning of my journey to learn more about TDD/DDD, clean, onion, hexagon architectures. If you have any feedback feel free to open up a an issue with information about how I should 've tackled it instead.
 
@@ -52,5 +51,10 @@ I'm not sure whether I should really define this as a Layer, but it's responsibi
 - [x] Is IService really a port?
 - [x] Make sure there are no naming conflicts. e.g "User"
 - [x] Clean up all imports with Absolute Pathing
-- [ ] Create an aggregated root for User Posts.
-- [ ] Create a post, get posts by user
+- [x] Create a post with user
+- [x] Get user posts by user
+- [ ] Refactor API Server with inversify express utils & add final tests
+
+## Next
+
+- [ ] Research aggregated roots, bound context, value objects
