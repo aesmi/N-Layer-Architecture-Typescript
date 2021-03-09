@@ -30,6 +30,7 @@ class App {
 
     this.server.use(express.json())
 
+    this.server.get('/all-posts', postController.getUserPosts)
     this.server.post(
       '/post',
       PostValidator.CreatePostRequest,

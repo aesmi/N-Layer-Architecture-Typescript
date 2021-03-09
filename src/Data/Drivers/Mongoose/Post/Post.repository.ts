@@ -13,6 +13,14 @@ export class PostRepository implements IPostRepository {
     @inject(Types.PostMapper) private readonly postMapper: IPostMapper
   ) {}
 
+  async getPostsByUser(
+    payload: Pick<IPostEntity, 'userId'>
+  ): Promise<IPostEntity[]> {
+    const userPosts = await this.model.find({ userId: payload.userId })
+
+    return this.postMapper.toDomainWithManyPosts(userPosts)
+  }
+
   async save(payload: IPostEntity) {
     const persistance = this.postMapper.toPersistence(payload)
     const createdPost = await this.model.create(persistance)

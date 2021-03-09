@@ -1,6 +1,5 @@
 import { NextFunction, Request } from 'express'
 import { HttpException } from 'Web/Lib/Http.exception'
-import { CreatePostRequestDto } from 'Core/Post/Dtos/CreatePostRequest.dto'
 
 export class PostValidator {
   static CreatePostRequest(req: Request, _: any, next: NextFunction) {
