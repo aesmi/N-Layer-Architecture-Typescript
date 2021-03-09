@@ -1,7 +1,6 @@
 # N-Layer Architecture in Node with Typescript
 
-This repository is a building block for me. It priortizes on making sure every layer is decoupled from each other.
-This allows us to 'easily' switch between technologies, test with ease and to add features with no sweat!
+This repository is a building block for me, It priortizes on making sure every layer is decoupled from each other. The big benefit is that it allows us to easily switch between technologies and test with ease.
 
 Do note this is my take on writing a **N-Layer Architecture** and I'm in the very beginning of my journey to learn more about TDD/DDD, clean, onion, hexagon architectures. If you have any feedback feel free to open up a an issue with information about how I should 've tackled it instead.
 
@@ -21,11 +20,11 @@ It all belongs in here. You should be very aware that the **Data** depends on **
 ### Core
 
 The Core Layer is where all the business related things happen. It's also responsible for creating ports(interfaces),
-a port to me means that another layer has to go through this in order to communicate. a key to get access to our implementations. Do note, the **Core** layer does not know about implementations of other layers.
+a port to me means that another layer has to go through this in order to communicate. Pretty much a key to get access to our implementations. Do note, the **Core** layer does not know about implementations of other layers.
 
 ### Web
 
-This is where your web application lives. If you don't want it to be web application. However the awesome thing about an N-Layer Architecture is that we are not building it specifically for the web. So if we wanted a console application we could very much do so!
+This is where your web application lives. However the awesome thing about an N-Layer Architecture is that we are not building it specifically for the web. So if we wanted a console application we could very much do so!
 
 ### Config
 
